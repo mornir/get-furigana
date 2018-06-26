@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Get Furigana</title>
+  <link rel="stylesheet" href="./vendor/beauter.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="my-container" id="app">
+
+    <div class="enter-box">
+      <h3>Get Furigana</h3>
+      <textarea id="furigana-area" cols="55" rows="25" v-model="furigana"></textarea>
+      <button id="get-furigana" disabled class="_disabled">Add furigana</button>
+      <div id="my-wrapper">
+        <p id="result"></p>
+        <label for="correct-ouput">Text to copy (correct if necessary):</label>
+        <textarea id="correct-ouput" cols="55" rows="25" v-model="furigana"></textarea>
+        <button id="copyToClipboard">Copy to clipboard (only in Chrome 😋)</button>
+        <small id="notif">Text copied to clipboard!</small>
+      </div>
+    </div>
+  </div>
+
+  <script src="./vendor/kuroshiro.min.js"></script>
+  <script src="index.js" defer></script>
+
+</body>
+
+</html>
