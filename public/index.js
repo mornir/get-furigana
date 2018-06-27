@@ -36,7 +36,7 @@ function getFurigana() {
 
   resultOutputParagraph.innerHTML = result
 
-  correctOutputArea.textContent = result
+  correctOutputArea.value = result
 
   myWrapper.style.opacity = '1'
 }
@@ -48,7 +48,7 @@ function correctOutput() {
 async function copyToClipboard() {
   if (!navigator.clipboard) return
   try {
-    await navigator.clipboard.writeText(correctOutputArea.textContent)
+    await navigator.clipboard.writeText(correctOutputArea.value)
     copyNotif.style.opacity = '1'
     setTimeout(() => (copyNotif.style.opacity = '0'), 2000)
   } catch (err) {
