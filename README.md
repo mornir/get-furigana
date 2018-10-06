@@ -2,7 +2,7 @@
 
 1.  Write Japanese in text area.
 2.  Click button to add furigana
-3.  Copy the output from the second text area to speak.
+3.  The second text area now contains the text with furigana in ruby tags.
 
 ## Corrections
 
