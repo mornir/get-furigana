@@ -30,3 +30,7 @@ label[for='correct-ouput'] {
 #notif {
   opacity: 0;
 }
+
+/* #copyToClipboard {
+  display: none;
+} */

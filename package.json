@@ -1,0 +1,28 @@
+{
+  "name": "get-furigana",
+  "version": "1.0.0",
+  "description": "Add furigana to kanji",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mornir/get-furigana.git"
+  },
+  "keywords": [
+    "furigana",
+    "japanese",
+    "kanji"
+  ],
+  "author": "Jérôme Pott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mornir/get-furigana/issues"
+  },
+  "homepage": "https://github.com/mornir/get-furigana#readme",
+  "devDependencies": {
+    "cypress": "^3.1.0"
+  },
+  "dependencies": {}
+}
