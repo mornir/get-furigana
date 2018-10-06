@@ -1,6 +1,6 @@
 describe('Generate furigana and correct output', () => {
   it('It should generate correct furigana', () => {
-    cy.visit('http://127.0.0.1:8080')
+    cy.visit('index.html')
 
     cy.get('#furigana-area')
       .type('自業自得')
