@@ -43,7 +43,7 @@ describe('Generate furigana and correct output', () => {
 
   /* it('It should copy output to clipboard', () => {
     cy.get('#copyToClipboard')
-      .contains('Copy to clipboard (only in Chrome 😋)')
+      .contains('Copy to clipboard')
       .click()
 
     cy.get('#notif')

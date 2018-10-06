@@ -8,6 +8,12 @@ const copyNotif = document.querySelector('#notif')
 
 let isKuroshiroReady = false
 
+copyToClipboardButton.hidden = true
+
+if (navigator.clipboard) {
+  copyToClipboardButton.hidden = false
+}
+
 kuroshiro.init(
   {
     dicPath: 'dict',
