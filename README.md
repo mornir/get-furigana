@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/mornir/get-furigana.svg?style=svg)](https://circleci.com/gh/mornir/get-furigana)
+
 ## How to use
 
 1.  Write Japanese in text area.
