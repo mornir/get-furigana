@@ -21,4 +21,4 @@ jobs:
           paths:
             - ~/.npm
             - ~/.cache
-      - run: $(npm bin)/cypress run --record
+      - run: $(npm bin)/cypress run
