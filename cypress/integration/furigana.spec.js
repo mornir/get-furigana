@@ -6,9 +6,7 @@ describe('Generate furigana and correct output', () => {
       .type('自業自得')
       .should('have.value', '自業自得')
 
-    cy.get('button')
-      .contains('Add furigana')
-      .click()
+    cy.get('#get-furigana').click()
 
     cy.get('#result ruby').contains('自業自得')
 
@@ -18,8 +16,6 @@ describe('Generate furigana and correct output', () => {
       'have.value',
       '<ruby>自業自得<rp>(</rp><rt>じごうじとく</rt><rp>)</rp></ruby>'
     )
-
-    /* cy.get('#correct-ouput').type({ backspace }) */
   })
   it('It should modify outputed furigana', () => {
     cy.get('#correct-ouput')
@@ -34,28 +30,8 @@ describe('Generate furigana and correct output', () => {
   })
 
   it('It should override modifications', () => {
-    cy.get('button')
-      .contains('Add furigana')
-      .click()
+    cy.get('#get-furigana').click()
 
     cy.get('#result ruby rt').contains('じごうじとく')
   })
-
-  /* it('It should copy output to clipboard', () => {
-    cy.get('#copyToClipboard')
-      .contains('Copy to clipboard')
-      .click()
-
-    cy.get('#notif')
-      .contains('Text copied to clipboard!')
-      .should('be.visible')
-
-    cy.get('#correct-ouput')
-      .clear()
-      .type('{ctrl}V', { release: false })
-      .should(
-        'have.value',
-        '<ruby>自業自得<rp>(</rp><rt>じごうじと</rt><rp>)</rp></ruby'
-      )
-  }) */
 })
