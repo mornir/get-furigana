@@ -5,23 +5,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Get Furigana</title>
-  <!-- <link rel="stylesheet" href="./vendor/beauter.min.css"> -->
-  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="my-container" id="app">
+  <div class="h-screen bg-orange-lightest font-sans">
+    <div class="container  mx-auto" id="app">
 
-    <div class="enter-box">
-      <h3>Get Furigana</h3>
-      <textarea id="furigana-area" cols="55" rows="25"></textarea>
-      <button id="get-furigana" disabled class="_disabled">Add furigana</button>
-      <div id="my-wrapper">
-        <p id="result"></p>
-        <label for="correct-ouput">Text to copy (correct if necessary):</label>
-        <textarea id="correct-ouput" cols="55" rows="25"></textarea>
-        <button id="copyToClipboard" type="button">Copy to clipboard</button>
-        <small id="notif">Text copied to clipboard!</small>
+      <div class="flex flex-col items-center">
+        <h3 class="text-5xl font-serif mt-12">Get Furigana</h3>
+        <textarea id="furigana-area" class="my-3 border-orange-lighter border focus:outline-none focus:border-orange w-full max-w-md text-2xl resize-none h-24"></textarea>
+        <button id="get-furigana" class="bg-orange-light text-black font-black p-4 opacity-50 cursor-not-allowed"
+          disabled>Add
+          furigana</button>
+
+        <div id="my-wrapper" style="display: none">
+
+          <textarea id="correct-ouput" class="my-3 border-orange-lighter border focus:outline-none focus:border-orange w-full max-w-lg text-xl resize-none h-48"></textarea>
+          <button id="copyToClipboard" type="button" class="bg-orange-light text-black font-black p-2">Copy to
+            clipboard</button>
+
+
+          <p id="result" class="my-3 text-3xl"></p>
+        </div>
       </div>
     </div>
   </div>

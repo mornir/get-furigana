@@ -4,7 +4,6 @@ const resultOutputParagraph = document.querySelector('#result')
 const correctOutputArea = document.querySelector('#correct-ouput')
 const myWrapper = document.querySelector('#my-wrapper')
 const copyToClipboardButton = document.querySelector('#copyToClipboard')
-const copyNotif = document.querySelector('#notif')
 
 let isKuroshiroReady = false
 
@@ -25,7 +24,7 @@ kuroshiro.init(
       console.log('kuroshiro is ready')
       isKuroshiroReady = true
       getFuriganaButton.disabled = !isKuroshiroReady
-      getFuriganaButton.classList.remove('_disabled')
+      getFuriganaButton.classList.remove('opacity-50', 'cursor-not-allowed')
     }
   }
 )
@@ -44,7 +43,7 @@ function getFurigana() {
 
   correctOutputArea.value = result
 
-  myWrapper.style.opacity = '1'
+  myWrapper.style.display = 'contents'
 }
 
 function correctOutput() {
@@ -55,8 +54,11 @@ async function copyToClipboard() {
   if (!navigator.clipboard) return
   try {
     await navigator.clipboard.writeText(correctOutputArea.value)
-    copyNotif.style.opacity = '1'
-    setTimeout(() => (copyNotif.style.opacity = '0'), 2000)
+    copyToClipboardButton.textContent = 'Copied!'
+    setTimeout(
+      () => (copyToClipboardButton.textContent = 'Copy to clipboard'),
+      2000
+    )
   } catch (err) {
     console.error('Failed to copy: ', err)
   }
