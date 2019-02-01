@@ -1,13 +1,18 @@
 describe('Generate furigana and correct output', () => {
-  it('It should generate correct furigana', () => {
+  before(() => {
     cy.visit('index.html')
+    cy.wait(4000)
+  })
 
+  beforeEach(() => {
     cy.get('#furigana-area')
+      .clear()
       .type('自業自得')
       .should('have.value', '自業自得')
-
     cy.get('#get-furigana').click()
+  })
 
+  it('It should generate correct furigana', () => {
     cy.get('#result ruby').contains('自業自得')
 
     cy.get('#result ruby rt').contains('じごうじとく')
