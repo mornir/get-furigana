@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/mornir/get-furigana#readme",
   "devDependencies": {
-    "cypress": "^3.1.5"
+    "cypress": "^3.5.0"
   },
   "dependencies": {}
 }
