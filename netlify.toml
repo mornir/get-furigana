@@ -1,2 +1,0 @@
-[build.environment]
-  NPM_FLAGS = "CYPRESS_INSTALL_BINARY=0"

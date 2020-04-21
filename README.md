@@ -1,6 +1,11 @@
 [![CircleCI](https://circleci.com/gh/mornir/get-furigana.svg?style=svg)](https://circleci.com/gh/mornir/get-furigana)
 
-## How to use
+## Running locally
+
+    yarn install
+    yarn dev
+
+# How to use
 
 1.  Write Japanese in text area.
 2.  Click button to add furigana
@@ -9,3 +14,7 @@
 ## Corrections
 
 You can correct the generated furigana in the second text area and see in realtime your modifications.
+
+# Testing
+
+    yarn test
