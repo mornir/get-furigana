@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Get Furigana</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.4/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Get Furigana</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/0.7.4/tailwind.min.css" rel="stylesheet">
-</head>
+  <body>
+    <div class="h-screen bg-orange-lightest font-sans">
+      <div class="container mx-auto" id="app">
+        <div class="flex flex-col items-center">
+          <h3 class="text-5xl font-serif mt-12">Get Furigana</h3>
+          <textarea
+            id="furigana-area"
+            class="my-3 border-orange-lighter border focus:outline-none focus:border-orange w-full max-w-md text-2xl resize-none h-24 p-2"
+          ></textarea>
+          <button
+            id="get-furigana"
+            class="bg-orange-light text-black font-black p-4 opacity-50 cursor-not-allowed"
+            disabled
+          >
+            Add furigana
+          </button>
 
-<body>
-  <div class="h-screen bg-orange-lightest font-sans">
-    <div class="container  mx-auto" id="app">
-
-      <div class="flex flex-col items-center">
-        <h3 class="text-5xl font-serif mt-12">Get Furigana</h3>
-        <textarea id="furigana-area" class="my-3 border-orange-lighter border focus:outline-none focus:border-orange w-full max-w-md text-2xl resize-none h-24"></textarea>
-        <button id="get-furigana" class="bg-orange-light text-black font-black p-4 opacity-50 cursor-not-allowed"
-          disabled>Add
-          furigana</button>
-
-        <div id="my-wrapper" style="display: none">
-
-          <textarea id="correct-ouput" class="my-3 border-orange-lighter border focus:outline-none focus:border-orange w-full max-w-lg text-xl resize-none h-48"></textarea>
-          <button id="copyToClipboard" type="button" class="bg-orange-light text-black font-black p-2">Copy to
-            clipboard</button>
-
-
-          <p id="result" class="my-3 text-3xl"></p>
+          <div id="my-wrapper" style="display: none">
+            <textarea
+              id="correct-ouput"
+              class="my-3 border-orange-lighter border focus:outline-none focus:border-orange w-full max-w-lg text-xl resize-none h-48 p-2"
+            ></textarea>
+            <p id="result" class="my-3 text-3xl"></p>
+            <button
+              id="copyToClipboard"
+              type="button"
+              class="bg-orange-light text-black font-black p-2"
+            >
+              Copy to clipboard
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="./vendor/kuroshiro.min.js"></script>
-  <script src="index.js" defer></script>
-
-</body>
-
+    <script src="./vendor/kuroshiro.min.js"></script>
+    <script src="index.js" defer></script>
+  </body>
 </html>
