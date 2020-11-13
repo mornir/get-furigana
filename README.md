@@ -1,5 +1,7 @@
 [![CircleCI](https://circleci.com/gh/mornir/get-furigana.svg?style=svg)](https://circleci.com/gh/mornir/get-furigana)
 
+**All the credits go to https://github.com/hexenq/kuroshiro**
+
 ## Running locally
 
     yarn install
